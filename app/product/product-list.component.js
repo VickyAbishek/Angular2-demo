@@ -78,10 +78,14 @@ var ProductListComponent = (function () {
         else
             this.visible = "Show";
     };
+    ProductListComponent.prototype.ngOnInit = function () {
+        console.log("in On Init dsfknah");
+    };
     ProductListComponent = __decorate([
         core_1.Component({
             selector: 'pm-products',
-            templateUrl: 'app/product/product-list.component.html'
+            templateUrl: 'app/product/product-list.component.html',
+            styleUrls: ['app/product/product-list.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], ProductListComponent);

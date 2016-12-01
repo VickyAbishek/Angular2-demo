@@ -1,12 +1,14 @@
-import { Component } from '@angular/core'
-
+import { Component , OnInit} from '@angular/core';
+import { IProduct } from './product';
 @Component({
     selector: 'pm-products',
     templateUrl:
-    'app/product/product-list.component.html'
+    'app/product/product-list.component.html' ,
+    styleUrls:
+    ['app/product/product-list.component.css']
 })
 
-export class ProductListComponent 
+export class ProductListComponent implements OnInit
 {
     pageTitle: string = 'Product List';
     //products: any = require('api/products/products.json');'
@@ -15,7 +17,7 @@ export class ProductListComponent
     listFilter: string = "Cart";
     margin: number = 2;
     showImage: boolean = false;
-    products: any =
+    products: IProduct[] =
     [
     {
         "productId": 1,
@@ -75,4 +77,7 @@ export class ProductListComponent
             else   
                 this.visible = "Show";
         }
+        ngOnInit(): void{
+        console.log( "in On Init dsfknah");
+    }
 }
