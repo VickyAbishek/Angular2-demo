@@ -8,30 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-<<<<<<< HEAD
 var core_1 = require('@angular/core');
-=======
->>>>>>> de82830ed2fbb022d6dc840f11cdde83b157345c
-var ProductFilterPipe = (function () {
-    function ProductFilterPipe() {
+//import { ProductListComponent } from './app/product/product-list.component'; --> not necessary
+var AppComponent = (function () {
+    function AppComponent() {
+        this.pageTitle = "from Component 1 ";
     }
-    ProductFilterPipe.prototype.transform = function (value, filterBy) {
-        filterBy = filterBy ? filterBy.toLowerCase() : null;
-        return filterBy ? value.filter(function (product) {
-            return product.productName.toLocaleLowerCase().indexOf(filterBy) != -1;
-        }) : value;
-    };
-    ProductFilterPipe = __decorate([
-<<<<<<< HEAD
-        core_1.Pipe({
-=======
-        Pipe({
->>>>>>> de82830ed2fbb022d6dc840f11cdde83b157345c
-            name: 'productFilter'
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'pm-app',
+            template: "\n    <h1> {{pageTitle}} <h1>\n     <pm-products>sdaf</pm-products>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], ProductFilterPipe);
-    return ProductFilterPipe;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.ProductFilterPipe = ProductFilterPipe;
-//# sourceMappingURL=product-filter.pipe.js.map
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map
