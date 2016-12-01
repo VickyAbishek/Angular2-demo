@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-//import { ProductListComponent } from './product/product-list.component'; --> not necessary
+//import { ProductListComponent } from './app/product/product-list.component'; --> not necessary
+
 @Component ({
     selector: 'pm-app',
     template: `

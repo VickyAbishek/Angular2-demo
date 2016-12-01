@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import { ProductListComponent } from './product/product-list.component'; --> not necessary
+//import { ProductListComponent } from './app/product/product-list.component'; --> not necessary
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = "from Component 1 ";
