@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
      <pm-products>sdaf</pm-products>
     `
 })
+
 export class AppComponent {
     pageTitle: string = "from Component 1 ";
 }

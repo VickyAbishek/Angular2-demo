@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 //import { ProductListComponent } from './app/product/product-list.component.html';
+
 import { AppComponent }  from './app.component';
-import { FormsModule } from '@angular/forms'
+
 import { ProductListComponent } from './app/product/product-list.component';
 import { ProductFilterPipe } from './app/product/product-filter.pipe'
+
 @NgModule({
   imports: [ BrowserModule,
   FormsModule

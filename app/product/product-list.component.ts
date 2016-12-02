@@ -2,10 +2,11 @@ import { Component , OnInit} from '@angular/core';
 import { IProduct } from './product';
 @Component({
     selector: 'pm-products',
+    moduleId: module.id,
     templateUrl:
-    'app/product/product-list.component.html' ,
+    'product-list.component.html' ,
     styleUrls:
-    ['app/product/product-list.component.css']
+    ['product-list.component.css']
 })
 
 export class ProductListComponent implements OnInit
