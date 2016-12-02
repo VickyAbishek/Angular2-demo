@@ -2,8 +2,9 @@ import { Component, OnChanges, Input , Output , EventEmitter} from '@angular/cor
 
 @Component({ 
     selector: 'ai-star' ,
-    templateUrl: './app/shared/star.component.html' ,
-    styleUrls: [ './app/shared/star.component.css' ]
+    moduleId: module.id,
+    templateUrl: './star.component.html' ,
+    styleUrls: [ './star.component.css' ]
 })
 
 export class StarComponent implements OnChanges{

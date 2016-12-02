@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 //import { ProductListComponent } from './app/product/product-list.component'; --> not necessary
+var product_service_1 = require('./app/product/product.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = "from Component 1 ";
@@ -17,7 +18,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'pm-app',
-            template: "\n    <h1> {{pageTitle}} <h1>\n     <pm-products>sdaf</pm-products>\n    "
+            template: "\n    <h1> {{pageTitle}} <h1>\n     <pm-products>sdaf</pm-products>\n    ",
+            providers: [product_service_1.ProductService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
