@@ -1,9 +1,5 @@
-import { PipeTransform } from '@angular/core'
+import { Pipe,PipeTransform } from '@angular/core'
 import { IProduct } from './product'
-<<<<<<< HEAD
-import { Pipe } from '@angular/core'
-=======
->>>>>>> de82830ed2fbb022d6dc840f11cdde83b157345c
 
 @Pipe({
     name: 'productFilter'

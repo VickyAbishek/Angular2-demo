@@ -13,8 +13,8 @@ var platform_browser_1 = require('@angular/platform-browser');
 //import { ProductListComponent } from './app/product/product-list.component.html';
 var app_component_1 = require('./app.component');
 var forms_1 = require('@angular/forms');
-var product_list_component_1 = require('./product/product-list.component');
-var product_filter_pipe_1 = require('./product/product-filter.pipe');
+var product_list_component_1 = require('./app/product/product-list.component');
+var product_filter_pipe_1 = require('./app/product/product-filter.pipe');
 var AppModule = (function () {
     function AppModule() {
     }

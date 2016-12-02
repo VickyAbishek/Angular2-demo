@@ -8,10 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-<<<<<<< HEAD
 var core_1 = require('@angular/core');
-=======
->>>>>>> de82830ed2fbb022d6dc840f11cdde83b157345c
 var ProductFilterPipe = (function () {
     function ProductFilterPipe() {
     }
@@ -22,11 +19,7 @@ var ProductFilterPipe = (function () {
         }) : value;
     };
     ProductFilterPipe = __decorate([
-<<<<<<< HEAD
         core_1.Pipe({
-=======
-        Pipe({
->>>>>>> de82830ed2fbb022d6dc840f11cdde83b157345c
             name: 'productFilter'
         }), 
         __metadata('design:paramtypes', [])

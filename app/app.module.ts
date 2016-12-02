@@ -8,7 +8,7 @@ import { ProductFilterPipe } from './product/product-filter.pipe'
 @NgModule({
   imports: [ BrowserModule,
   FormsModule
-   ],
+  ],
   declarations: [ 
     AppComponent,
     ProductListComponent,
