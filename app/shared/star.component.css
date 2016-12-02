@@ -4,3 +4,11 @@
 div {
     cursor: pointer;
 }
+
+ai-star > div {
+    display: inline-flex;
+}
+
+star-display {
+    overflow:hidden;
+}
