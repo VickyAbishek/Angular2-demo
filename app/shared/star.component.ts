@@ -9,14 +9,17 @@ import { Component, OnChanges, Input , Output , EventEmitter} from '@angular/cor
 
 export class StarComponent implements OnChanges{
     @Input() rating: number ;
+    @Output() notify:  EventEmitter<string> = new EventEmitter<string>();
     starWidth: number;
     ngOnChanges(): void {
         this.starWidth = this.rating * 220 / 5;
+        // 220 --> star-display width
     }
 
-    @Output() ratingClick:  EventEmitter<string> = new EventEmitter<string>();
     onClick(): void {
         console.log("inside onClick");
-        this.ratingClick.emit('The rating $(this.rating) was clicked');
-    }
+        console.log( this.rating );
+        this.notify.emit('The rating '+ this.rating + ' was clicked');
+        console.log("exiting onclick");
+    } 
 }

@@ -98,8 +98,8 @@ export class ProductListComponent implements OnInit
         this.products = this._productService.getProducts();
         }
 
-        onRatingClick(message: string): void{
-            this.pageTitle = "Product" + message;
+        onNotify(message: string): void{
+                this.pageTitle = "Product:" + message;
         }
 
         

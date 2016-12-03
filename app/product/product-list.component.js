@@ -88,8 +88,8 @@ var ProductListComponent = (function () {
         console.log("in On Init dsfknah");
         this.products = this._productService.getProducts();
     };
-    ProductListComponent.prototype.onRatingClick = function (message) {
-        this.pageTitle = "Product" + message;
+    ProductListComponent.prototype.onNotify = function (message) {
+        this.pageTitle = "Product:" + message;
     };
     ProductListComponent = __decorate([
         core_1.Component({

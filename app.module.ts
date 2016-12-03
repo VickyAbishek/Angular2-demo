@@ -4,14 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 //import { ProductListComponent } from './app/product/product-list.component.html';
 import { ProductService } from './app/product/product.service'
 import { AppComponent }  from './app.component';
-
+import { StarComponent } from './app/shared/star.component';
 import { ProductListComponent } from './app/product/product-list.component';
 import { ProductFilterPipe } from './app/product/product-filter.pipe'
 
 @NgModule({
   imports: [ BrowserModule,FormsModule ],
-  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe,],
-  // ProductService ],
+  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe, StarComponent],
   bootstrap: [ AppComponent ] , 
   
 })
