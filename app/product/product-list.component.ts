@@ -8,7 +8,8 @@ import { ProductService } from './product.service';
     templateUrl:
     'product-list.component.html' ,
     styleUrls:
-    ['product-list.component.css']
+    ['product-list.component.css'],
+    providers: [ProductService]
 })
 
 export class ProductListComponent implements OnInit
@@ -95,7 +96,8 @@ export class ProductListComponent implements OnInit
         ngOnInit(): void{
         console.log( "in On Init dsfknah");
         this.products = this._productService.getProducts();
-    }
+        }
+
         onRatingClick(message: string): void{
             this.pageTitle = "Product" + message;
         }

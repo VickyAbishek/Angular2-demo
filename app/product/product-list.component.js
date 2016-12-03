@@ -96,7 +96,8 @@ var ProductListComponent = (function () {
             selector: 'pm-products',
             moduleId: module.id,
             templateUrl: 'product-list.component.html',
-            styleUrls: ['product-list.component.css']
+            styleUrls: ['product-list.component.css'],
+            providers: [product_service_1.ProductService]
         }), 
         __metadata('design:paramtypes', [product_service_1.ProductService])
     ], ProductListComponent);
