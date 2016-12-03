@@ -16,12 +16,13 @@ var forms_1 = require('@angular/forms');
 var product_list_component_1 = require('./product/product-list.component');
 var product_filter_pipe_1 = require('./product/product-filter.pipe');
 var star_component_1 = require('./shared/star.component');
+var http_1 = require('@angular/http');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
             declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

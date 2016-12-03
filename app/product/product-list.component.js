@@ -21,12 +21,6 @@ var ProductListComponent = (function () {
         this.showImage = false;
         this.products = [];
     }
-    ;
-    //  private _productService;
-    // constructor(private _productservice: ProductService)
-    // {
-    //        _productService = productservice;
-    //  }
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
         if (this.showImage)
@@ -35,8 +29,10 @@ var ProductListComponent = (function () {
             this.visible = "Show";
     };
     ProductListComponent.prototype.ngOnInit = function () {
-        console.log("in On Init dsfknah");
-        this.products = this._productService.getProducts();
+        var _this = this;
+        //this.products = this._productService.getProducts();
+        this._productService.getProducts()
+            .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
     };
     ProductListComponent.prototype.onNotify = function (message) {
         this.pageTitle = "Product:" + message;

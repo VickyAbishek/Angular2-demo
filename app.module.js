@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
-//import { ProductListComponent } from './app/product/product-list.component.html';
+var http_1 = require('@angular/http');
 var product_service_1 = require('./app/product/product.service');
 var app_component_1 = require('./app.component');
 var star_component_1 = require('./app/shared/star.component');
@@ -22,7 +22,7 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
             declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent],
             bootstrap: [app_component_1.AppComponent],
         }), 
