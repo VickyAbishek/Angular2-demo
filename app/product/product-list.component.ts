@@ -21,8 +21,8 @@ export class ProductListComponent implements OnInit
     listFilter: string ;//= "Cart";
     margin: number = 2;
     showImage: boolean = false;
-    products: IProduct[] =
-    [
+    products: IProduct[] = [];
+ /*   [
     {
         "productId": 1,
         "productName": "Leaf Rake",
@@ -73,7 +73,7 @@ export class ProductListComponent implements OnInit
         "starRating": 4.6,
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
     }
-]
+]*/
     ;
 
 
@@ -89,9 +89,7 @@ export class ProductListComponent implements OnInit
             else
                 this.visible = "Show";
         }
-        constructor( private _productService: ProductService){
-
-        }
+        constructor( private _productService: ProductService){  }
 
         ngOnInit(): void{
         console.log( "in On Init dsfknah");
