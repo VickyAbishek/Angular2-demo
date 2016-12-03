@@ -13,7 +13,7 @@ var core_1 = require('@angular/core');
 var product_service_1 = require('./app/product/product.service');
 var AppComponent = (function () {
     function AppComponent() {
-        this.pageTitle = "from Component 1 ";
+        this.pageTitle = ""; //from Component 1 ";
     }
     AppComponent = __decorate([
         core_1.Component({

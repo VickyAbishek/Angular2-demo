@@ -10,8 +10,13 @@ import { ProductFilterPipe } from './app/product/product-filter.pipe'
 
 @NgModule({
   imports: [ BrowserModule,FormsModule ],
-  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe, ProductService ],
+  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe,],
+  // ProductService ],
   bootstrap: [ AppComponent ] , 
   
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(_productService: ProductService){
+
+  }
+}

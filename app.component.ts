@@ -8,7 +8,12 @@ import { ProductService } from './app/product/product.service'
      <pm-products>sdaf</pm-products>
     ` ,
     providers: [ProductService]
+    // add multiple services by comma
 })
 export class AppComponent {
-    pageTitle: string = "from Component 1 ";
+    pageTitle: string = "";//from Component 1 ";
+    /*
+    constructor ( _productService: ProductService ){
+
+    }*/
 }
