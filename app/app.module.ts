@@ -10,19 +10,19 @@ import { HttpModule } from '@angular/http';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetails } from './product/product-details.component';
 import { RouterModule } from '@angular/router';
-
+import { ProductGuardService } from './product/product-guard.service';
 
 @NgModule({
   imports:       [ BrowserModule,FormsModule, HttpModule, 
   RouterModule.forRoot([
     {path: 'products', component: ProductListComponent },
-    {path: 'product/:id',component: ProductDetails },
+    {path: 'product/:id', canActivate: [ ProductGuardService],component: ProductDetails },
     {path: 'welcome', component: WelcomeComponent },
     {path: '', redirectTo: 'welcome', pathMatch: 'full'},
     {path:'**', redirectTo:'welcome', pathMatch:'full'}
   ])// set base href = "/" in index.html
   ],
-  providers: [ProductService],
+  providers: [ProductService, ProductGuardService],
   declarations:  [ AppComponent,ProductListComponent,ProductFilterPipe,StarComponent, WelcomeComponent , ProductDetails ],
   bootstrap:     [ AppComponent ]
 })

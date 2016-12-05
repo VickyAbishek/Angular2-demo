@@ -20,6 +20,7 @@ var http_1 = require('@angular/http');
 var welcome_component_1 = require('./home/welcome.component');
 var product_details_component_1 = require('./product/product-details.component');
 var router_1 = require('@angular/router');
+var product_guard_service_1 = require('./product/product-guard.service');
 var AppModule = (function () {
     function AppModule(_productService) {
     }
@@ -28,13 +29,13 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule,
                 router_1.RouterModule.forRoot([
                     { path: 'products', component: product_list_component_1.ProductListComponent },
-                    { path: 'product/:id', component: product_details_component_1.ProductDetails },
+                    { path: 'product/:id', canActivate: [product_guard_service_1.ProductGuardService], component: product_details_component_1.ProductDetails },
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                     { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
                 ]) // set base href = "/" in index.html
             ],
-            providers: [product_service_1.ProductService],
+            providers: [product_service_1.ProductService, product_guard_service_1.ProductGuardService],
             declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent, welcome_component_1.WelcomeComponent, product_details_component_1.ProductDetails],
             bootstrap: [app_component_1.AppComponent]
         }), 

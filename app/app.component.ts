@@ -4,6 +4,7 @@ import { ProductService } from './product/product.service';
 @Component ({
     selector: 'pm-app',
 //    providers: [ProductService],
+// no need for providers in Components
     template: `
     <div>
         <nav class='navbar navbar-default'>

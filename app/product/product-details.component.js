@@ -9,21 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_service_1 = require('./product.service');
 var router_1 = require('@angular/router');
 var ProductDetails = (function () {
-    function ProductDetails(_route, _router) {
+    function ProductDetails(_route, _router, _productService) {
         this._route = _route;
         this._router = _router;
+        this._productService = _productService;
+        this.imageWidth = 50;
+        this.margin = 2;
         this.pageTitle = 'Product Detail';
     }
     ProductDetails.prototype.ngOnInit = function () {
-        var id = +this._route.snapshot.params['id'];
-        this.pageTitle += ' : ' + id;
+        var _this = this;
+        this.id = +this._route.snapshot.params['id'];
+        this.pageTitle += ' : ' + this.id;
         console.log(":::::" + this.pageTitle);
+        this._productService.getProducts()
+            .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
+        console.log("Inside onInit pro-det" + this.id);
     };
     ProductDetails.prototype.onBack = function () {
         console.log("Inside onBack()");
         this._router.navigate(['/products']);
+    };
+    ProductDetails.prototype.getList = function (pro) {
+        if (pro.productId == this.id)
+            return true;
+        return false;
     };
     ProductDetails = __decorate([
         core_1.Component({
@@ -32,7 +45,7 @@ var ProductDetails = (function () {
             moduleId: module.id,
             templateUrl: './product-details.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, product_service_1.ProductService])
     ], ProductDetails);
     return ProductDetails;
 }());

@@ -8,5 +8,18 @@
         style="width:80px">
             <i class="glyphicon glyphicon-chevron-left"></i> Back
         </a>
+    <tr *ngFor='let product of products' >
+        <div *ngIf="getList(product)==true">
+            <li> {{ product.productId }} </li>
+            <li> {{ product.productName }} </li>
+            <li> {{ product.productCode }} </li>
+            <li> {{ product.price }} </li>
+            <li> <img [src]='product.imageUrl'
+            [style.width.px]='imageWidth'
+            [style.margin.px]='margin'
+            > </li>
+            <li> {{ product.description }} </li>
+        </div>
+    </tr>   
     </div>
 </div>
