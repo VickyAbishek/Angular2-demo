@@ -9,15 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import { ProductListComponent } from './app/product/product-list.component'; --> not necessary
 var AppComponent = (function () {
     function AppComponent() {
-        this.pageTitle = "from Component 1 ";
+        this.pageTitle = "";
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'pm-app',
-            template: "\n    <h1> {{pageTitle}} <h1>\n     <pm-products>sdaf</pm-products>\n    "
+            //    providers: [ProductService],
+            template: "\n    <div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'> {{pageTitle}} </a>\n                <ul class='nav navbar-nav'>\n                    <li><a [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li><a [routerLink]=\"['/product']\">Product</a></li>\n                </ul>\n                <div class=\"container\">\n                <router-outlet></router-outlet>\n                </div>\n            </div>\n        </nav>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

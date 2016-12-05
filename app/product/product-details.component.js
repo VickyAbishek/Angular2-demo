@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_service_1 = require('./app/product/product.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = ""; //from Component 1 ";
+var ProductDetails = (function () {
+    function ProductDetails() {
+        this.pageTitle = 'Product Detail';
     }
-    AppComponent = __decorate([
+    ProductDetails = __decorate([
         core_1.Component({
-            selector: 'pm-app',
-            template: "\n    <h1> {{pageTitle}} <h1>\n     <pm-products>sdaf</pm-products>\n    ",
-            providers: [product_service_1.ProductService]
+            //selector: 'pd',
+            // selector is required only for nested components
+            moduleId: module.id,
+            templateUrl: './product-details.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ProductDetails);
+    return ProductDetails;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ProductDetails = ProductDetails;
+//# sourceMappingURL=product-details.component.js.map

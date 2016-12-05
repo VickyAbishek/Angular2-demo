@@ -15,7 +15,6 @@ import { ProductService } from './product.service';
 export class ProductListComponent implements OnInit
 {
     pageTitle: string = 'Product List';
-    //products: any = require('api/products/products.json');'
     imageWidth: number = 50;
     visible: string = "Show";
     listFilter: string ;//= "Cart";
@@ -36,7 +35,7 @@ export class ProductListComponent implements OnInit
 
     ngOnInit(): void
     {
-        //this.products = this._productService.getProducts();
+        //this.products = this._product Service.getProducts();
         this._productService.getProducts()
             .subscribe(
                 products => this.products = products,

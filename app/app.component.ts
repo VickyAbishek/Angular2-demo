@@ -1,14 +1,27 @@
 import { Component } from '@angular/core';
-//import { ProductListComponent } from './app/product/product-list.component'; --> not necessary
+import { ProductService } from './product/product.service';
 
 @Component ({
     selector: 'pm-app',
+//    providers: [ProductService],
     template: `
-    <h1> {{pageTitle}} <h1>
-     <pm-products>sdaf</pm-products>
-    `
+    <div>
+        <nav class='navbar navbar-default'>
+            <div class='container-fluid'>
+                <a class='navbar-brand'> {{pageTitle}} </a>
+                <ul class='nav navbar-nav'>
+                    <li><a [routerLink]="['/welcome']">Home</a></li>
+                    <li><a [routerLink]="['/product']">Product</a></li>
+                </ul>
+                <div class="container">
+                <router-outlet></router-outlet>
+                </div>
+            </div>
+        </nav>
+    </div>
+    ` 
 })
 
 export class AppComponent {
-    pageTitle: string = "from Component 1 ";
+    pageTitle: string = ""; 
 }

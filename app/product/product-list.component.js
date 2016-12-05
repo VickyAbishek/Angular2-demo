@@ -14,7 +14,6 @@ var ProductListComponent = (function () {
     function ProductListComponent(_productService) {
         this._productService = _productService;
         this.pageTitle = 'Product List';
-        //products: any = require('api/products/products.json');'
         this.imageWidth = 50;
         this.visible = "Show";
         this.margin = 2;
@@ -30,7 +29,7 @@ var ProductListComponent = (function () {
     };
     ProductListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        //this.products = this._productService.getProducts();
+        //this.products = this._product Service.getProducts();
         this._productService.getProducts()
             .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
     };
