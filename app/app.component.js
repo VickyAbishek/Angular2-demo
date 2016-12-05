@@ -17,7 +17,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'pm-app',
             //    providers: [ProductService],
-            template: "\n    <div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'> {{pageTitle}} </a>\n                <ul class='nav navbar-nav'>\n                    <li><a [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li><a [routerLink]=\"['/product']\">Product</a></li>\n                </ul>\n                <div class=\"container\">\n                <router-outlet></router-outlet>\n                </div>\n            </div>\n        </nav>\n    </div>\n    "
+            template: "\n    <div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'> {{pageTitle}} </a>\n                <ul class='nav navbar-nav'>\n                    <li><a [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li><a [routerLink]=\"['/products']\">Product</a></li>\n                </ul>\n                <div class=\"container\">\n                <router-outlet></router-outlet>\n                </div>\n            </div>\n        </nav>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

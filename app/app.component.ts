@@ -11,7 +11,7 @@ import { ProductService } from './product/product.service';
                 <a class='navbar-brand'> {{pageTitle}} </a>
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['/welcome']">Home</a></li>
-                    <li><a [routerLink]="['/product']">Product</a></li>
+                    <li><a [routerLink]="['/products']">Product</a></li>
                 </ul>
                 <div class="container">
                 <router-outlet></router-outlet>
